@@ -1,0 +1,26 @@
+
+type Root {
+    id: ID!
+    name: String
+    organization: [Organization]
+}
+
+type Organization {
+    id: ID!
+    name: String
+    root: Root
+    enviroment: [Enviroment]
+}
+
+type Enviroment {
+    id: ID!
+    name: String
+    organization: Organization
+    users: [User]
+}
+
+# type User {
+#     id: ID!
+#     name: String
+#     Enviroment: Enviroment
+# }
