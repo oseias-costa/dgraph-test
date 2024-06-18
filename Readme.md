@@ -7,6 +7,7 @@ change the endpoint to:
 http://localhost:8080/graphql
 https://lucasconstantino.github.io/graphiql-online/
 
+```graphql
 mutation {
   addOrganization(input: {name: "Organization 4", root: {id: "0x6"}) {  
     organization {
@@ -45,6 +46,7 @@ query {
     }
   }
 }
+
 
 query {
   queryUser{
@@ -242,3 +244,4 @@ mutation {
   }
 }
 
+```
