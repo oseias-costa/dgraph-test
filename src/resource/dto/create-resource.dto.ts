@@ -5,11 +5,8 @@ export class CreateResourceDto {
     resourceName: string
     
     @IsString()
-    resourceType: string
+    resourceType: 'ROOT' | 'ORGANIZATION' | 'ENVIRONMENT'
 
     @IsString()
-    resourceParentType: string
-
-    @IsString()
-    resourceParentId: string
+    resourceParentId?: string
 }

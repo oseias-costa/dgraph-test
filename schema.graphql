@@ -1,26 +1,7 @@
-
-type Root {
+type Resource {
     id: ID!
-    name: String
-    organization: [Organization]
+    name: String!
+    type: String!
+    parent: Resource
+    children: [Resource] @hasInverse(field: parent)
 }
-
-type Organization {
-    id: ID!
-    name: String
-    root: Root
-    enviroment: [Enviroment]
-}
-
-type Enviroment {
-    id: ID!
-    name: String
-    organization: Organization
-    users: [User]
-}
-
-# type User {
-#     id: ID!
-#     name: String
-#     Enviroment: Enviroment
-# }
